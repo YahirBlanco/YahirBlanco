@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bob Esponja</title>
+<style>
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #87CEEB;  
+  }
+  .cuerno {
+    width: 35;
+    height: 40;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 100px solid bisque; /* Color rojo */
+    position: absolute;
+    top: 36%; /* Centrar verticalmente */
+    left: 18%;
+    transform: translateY(-60%); /* Ajuste para centrar verticalmente */
+
+  }
+  .cuerno2 {
+    width: 35;
+    height: 40;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 100px solid bisque; /* Color rojo */
+    position: absolute;
+    top: 36%; /* Centrar verticalmente */
+    left: 26%;
+    transform: translateY(-60%); /* Ajuste para centrar verticalmente */
+
+  }
+  .brazo {
+    width: 340px;
+    height: 45px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .brazo2 {
+    width: 340px;
+    height: 45px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .abrazo {
+    width: 35px;
+    height: 130px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 360px;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mano {
+    width: 60px;
+    height: 50px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 410px;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 420px;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo2 {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 417px;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo3 {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 417px;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .abrazo2 {
+    width: 35px;
+    height: 130px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 360px;
+    left: 43%;
+    transform: translate(-50%, -50%);
+  }
+  .mano2 {
+    width: 60px;
+    height: 50px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 410px;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo4 {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 420px;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo5 {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 417px;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .mdedo6 {
+    width: 8px;
+    height: 25px;
+    background-color: rgba(237, 176, 102, 0.904);
+    border-radius: 50%;
+    position: absolute;
+    top: 417px;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+
+  .pierna {
+    width: 45px;
+    height: 340px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 390px;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .pierna2 {
+    width: 45px;
+    height: 340px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 390px;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .pie {
+    width: 90px;
+    height: 50px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 535px;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .pie2 {
+    width: 90px;
+    height: 50px;
+    background-color: #86fe2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 535px;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .dedo {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 548px;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .dedo2 {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 536px;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .dedo3 {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 524px;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .dedo4 {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 548px;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .dedo5 {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 536px;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .dedo6 {
+    width: 25px;
+    height: 8px;
+    background-color: rgba(203, 128, 37, 0.612);
+    border-radius: 50%;
+    position: absolute;
+    top: 524px;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .mikewa {
+    content: "";
+    width: 20%;
+    height: 45%;
+    background-color: #86fe2b; 
+    border-radius: 50%;
+    position: absolute;
+    bottom: 25%;
+    top: 184px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  .marco {
+    width: 130px;
+    height: 135px;
+    background-color: black; 
+    border-radius: 50%;
+    position: absolute;
+    top: 194px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  .ojos {
+    width: 130px;
+    height: 135px;
+    background-color: white; 
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  .pupila {
+    content: "";
+    width: 75px;
+    height: 85px;
+    background-color: #4eb807; 
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translateX(-50%)
+  }
+
+  .blanco {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 270px;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .ojos2 {
+    width: 38px;
+    height: 44px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 290px;
+    left: 25%;
+    transform: translate(-50%, -50%)
+  }
+
+  .img {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: url('img/mike.jpg') no-repeat center center/cover;
+    opacity: 50px;
+    left: 700px;
+    top: 0px;
+  }
+
+  .boca {
+    width: 100px;
+    height: 60px;
+    background-color: #000000; 
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 350px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  .lengua {
+    width: 85px;
+    height: 35px;
+    background-color: #069406; 
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 375px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  .diente {
+    content: "";
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    bottom: 20;
+    top: 390px;
+    left: 27%;
+    transform: translateX(-50%);
+  }
+  .diente2 {
+    content: "";
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    bottom: 20;
+    top: 390px;
+    left: 26%;
+    transform: translateX(-50%);
+  }
+  .diente3 {
+    content: "";
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    bottom: 20;
+    top: 390px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  .diente4 {
+    content: "";
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    bottom: 20;
+    top: 390px;
+    left: 24%;
+    transform: translateX(-50%);
+  }
+  .diente5 {
+    content: "";
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    bottom: 20;
+    top: 390px;
+    left: 23%;
+    transform: translateX(-50%);
+  }
+
+
+
+</style>
+</head>
+<body>
+
+  <div class="texto-presentacion">
+    <h1>Mi primer dibujo en CSS</h1>
+    <h2>Diseno por Yahir Blanco</h2>
+    <p>De la especialidad de programacion de 4 semestre de la escuela Cetis 131</p>
+  </div>
+
+ <div class="mike">
+   <div class="cuerno"></div>
+   <div class="cuerno2"></div>
+   <div class="brazo"></div>
+   <div class="brazo2"></div>
+   <div class="abrazo"></div>
+   <div class="mano"></div>
+   <div class="mdedo"></div>
+   <div class="mdedo2"></div>
+   <div class="mdedo3"></div>>
+   <div class="abrazo2"></div>
+   <div class="mano2"></div>
+   <div class="mdedo4"></div>
+   <div class="mdedo5"></div>
+   <div class="mdedo6"></div>
+   <div class="pierna"></div>
+   <div class="pierna2"></div>
+   <div class="pie"></div>
+   <div class="pie2"></div>
+   <div class="dedo"></div>
+   <div class="dedo2"></div>
+   <div class="dedo3"></div>
+   <div class="dedo4"></div>
+   <div class="dedo5"></div>
+   <div class="dedo6"></div>
+   <div class="mikewa"></div>
+   <div class="marco"></div>
+   <div class="ojos"></div>
+   <div class="pupila"></div>
+   <div class="blanco"></div>
+   <div class="ojos2"></div>
+   <div class="img"></div>
+   <div class="boca"></div>
+   <div class="lengua"></div>
+   <div class="diente"></div>
+   <div class="diente2"></div>
+   <div class="diente3"></div>
+   <div class="diente4"></div>
+   <div class="diente5"></div>
+  </div>
+
+</body>
+</html>
